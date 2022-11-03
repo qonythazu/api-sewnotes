@@ -1,0 +1,36 @@
+RewriteEngine On # Turn on the rewriting engine
+RewriteRule ^user/?$ user.php [NC,L]
+RewriteRule ^user/([0-9]+)/?$ user.php?id=$1 [NC,L]
+RewriteRule ^user/([^/]+)/([0-9]+)/?$ user.php?id=$2&action=$1 [QSA,L]
+
+RewriteRule ^catatan/?$ catatan.php [NC,L]
+RewriteRule ^catatan/([0-9]+)/?$ catatan.php?id=$1 [NC,L]
+RewriteRule ^catatan/([^/]+)/([0-9]+)/?$ catatan.php?id=$2&action=$1 [QSA,L]
+
+RewriteRule ^jasa/?$ jasa.php [NC,L]
+RewriteRule ^jasa/([0-9]+)/?$ jasa.php?id=$1 [NC,L]
+RewriteRule ^jasa/([^/]+)/([0-9]+)/?$ jasa.php?id=$2&action=$1 [QSA,L]
+
+RewriteRule ^kain/?$ kain.php [NC,L]
+RewriteRule ^kain/([0-9]+)/?$ kain.php?id=$1 [NC,L]
+RewriteRule ^kain/([^/]+)/([0-9]+)/?$ kain.php?id=$2&action=$1 [QSA,L]
+
+RewriteRule ^detail_catatan/?$ detail_catatan.php [NC,L]
+RewriteRule ^detail_catatan/([0-9]+)/?$ detail_catatan.php?id=$1 [NC,L]
+RewriteRule ^detail_catatan/([^/]+)/([0-9]+)/?$ detail_catatan.php?id=$2&action=$1 [QSA,L]
+
+RewriteRule ^jasa_nama_ukuran/?$ jasa_nama_ukuran.php [NC,L]
+RewriteRule ^jasa_nama_ukuran/([0-9]+)/?$ jasa_nama_ukuran.php?id=$1 [NC,L]
+RewriteRule ^jasa_nama_ukuran/([^/]+)/([0-9]+)/?$ jasa_nama_ukuran.php?id=$2&action=$1 [QSA,L]
+
+RewriteRule ^nama_ukuran/?$ nama_ukuran.php [NC,L]
+RewriteRule ^nama_ukuran/([0-9]+)/?$ nama_ukuran.php?id=$1 [NC,L]
+RewriteRule ^nama_ukuran/([^/]+)/([0-9]+)/?$ nama_ukuran.php?id=$2&action=$1 [QSA,L]
+
+RewriteRule ^ukuran_detail_catatan/?$ ukuran_detail_catatan.php [NC,L]
+RewriteRule ^ukuran_detail_catatan/([0-9]+)/?$ ukuran_detail_catatan.php?id=$1 [NC,L]   
+RewriteRule ^ukuran_detail_catatan/([^/]+)/([0-9]+)/?$ ukuran_detail_catatan.php?id=$2&action=$1 [QSA,L]
+
+RewriteRule ^auth/?$ auth.php [NC,L]
+RewriteRule ^auth/([A-Za-z0-9]+)/?$ auth.php?id=$1 [NC,L]
+RewriteRule ^auth/([^/]+)/([0-9]+)/?$ auth.php?id=$2&action=$1 [QSA,L]
