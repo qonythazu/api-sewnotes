@@ -45,6 +45,30 @@ class Kain
       echo json_encode($response);
         
    }
+
+   public function get_kain_user($id=0)
+   {
+      global $mysqli;
+      $query="SELECT * FROM kain";
+      if($id != 0)
+      {
+         $query.=" WHERE id_user=".$id." LIMIT 1";
+      }
+      $data=array();
+      $result=$mysqli->query($query);
+      while($row=mysqli_fetch_object($result))
+      {
+         $data[]=$row;
+      }
+      $response=array(
+                     'status' => 1,
+                     'message' =>'Berhasil Mendapatkan Data Kain User',
+                     'data' => $data
+                  );
+      header('Content-Type: application/json');
+      echo json_encode($response);
+        
+   }
  
    public function insert_kain()
       {
